@@ -1,21 +1,19 @@
 //  ctrl + / (NOTE THIS IS A COMMENT)
-
 //  This is an external JavaScript file
 
+// ================================
 // SPECIAL FUNCTIONS IN JAVASCRIPT
+// ================================
 
 // a simple log to the console or the terminal
 console.log("Hello, World!");
 // a special function that shows a dialog box to the user(asks the user for input)
-
 prompt("Enter your name: to continue");
 
 // alert shows a message to the user in a dialog box
-
 alert("Thank you, you have been registered!");
 
 // Variable declaration is where we use the var, let, or const keywords to create a variable
-
 let userName = prompt("Enter your name to continue");
 
 // the name stored in the userName variable is printed to the console
@@ -24,6 +22,10 @@ console.log(userName || console.error("username is required"));
 // we use the OR operator || to provide a fallback action if userName is falsy (empty, null, undefined
 // we use backticks ` ` to create a template literal that can include variables and functions inside ${}
 alert(`Welcome, ${userName}! You have been registered successfully.`);
+
+// ================================
+// DATA TYPES & VARIABLE DECLARATION
+// ================================
 
 // variables store data values that can be used and manipulated throughout the code
 
@@ -57,7 +59,7 @@ console.log(uniqueId);
 let bigNumber = BigInt(9007199254740991);
 console.log(bigNumber);
 
-//here are some examples of variable declarations using var, let, and const:
+// here are some examples of variable declarations using var, let, and const:
 var city = "New York"; // function-scoped variable (NOT recommended for use in modern JavaScript)
 let country = "USA"; // block-scoped variable
 const pi = 3.14159; // block-scoped constant variable
@@ -65,6 +67,10 @@ console.log(city, country, pi);
 
 const countryCode = 254;
 console.log(`The country code is +${countryCode}`);
+
+// ================================
+// ARITHMETIC OPERATIONS
+// ================================
 
 //Javascript is able to conduct all arithmetic operations like addition, subtraction, multiplication, and division
 // Here is an example of addition:
@@ -115,11 +121,10 @@ console.log(`The result of the complex calculation is ${complexCalculation}`);
 let groupedCalculation = ((x + y) * x) / (y - 2);
 console.log(`The result of the grouped calculation is ${groupedCalculation}`);
 
-// These examples demonstrate the basic arithmetic operations in JavaScript.
+// ================================
+// ASSIGNMENT OPERATORS
+// ================================
 
-// You can use these operations to perform calculations and manipulate numeric data in your programs.
-
-// Assignment Operators
 let a = 10; // assigns the value 10 to variable a
 let b = 5;  // assigns the value 5 to variable b
 
@@ -148,7 +153,10 @@ a **= b; // equivalent to a = a ** b
 console.log(`The value of a after exponentiation assignment is ${a}`);
 // These examples demonstrate the use of assignment operators in JavaScript.
 
-// comparison operations
+// ================================
+// COMPARISON OPERATIONS
+// ================================
+
 // comparison operators are used to compare two values and return a boolean result (true or false) (truthy or falsy).
 
 let m = 10;
@@ -177,9 +185,11 @@ console.log(m < n); // false, because 10 is not less than 5
 
 // Here is an example of the less than or equal to operator (<=):
 console.log(m <= n); // false, because 10 is not less than or equal to 5
-// These examples demonstrate the use of comparison operators in JavaScript.
 
-// Logical or boolean operators
+// ================================
+// LOGICAL / BOOLEAN OPERATORS
+// ================================
+
 let p = true;
 let q = false;
 // Here is an example of the logical AND operator (&&):
@@ -191,7 +201,10 @@ console.log(p || q); // true, because at least one of p or q is true
 console.log(!p); // false, because p is true, so NOT p is false
 // These examples demonstrate the use of logical operators in JavaScript.
 
-// String Operations
+// ================================
+// STRING OPERATIONS
+// ================================
+
 let str1 = "Hello, ";
 let str2 = "World!";
 
@@ -203,7 +216,9 @@ console.log(`The combined string is: ${combinedStr}`);
 let repeatedStr = str1.repeat(3);
 console.log(`The repeated string is: ${repeatedStr}`);
 
-// Program Flow Control Structures
+// ================================
+// PROGRAM FLOW CONTROL STRUCTURES
+// ================================
 
 // Functions
 // (a function is a piece of code that performs a specific task and can be reused multiple times throughout the program)
@@ -230,6 +245,10 @@ function greetUser(name) {
 
 //call by function name
 greetUser("Wedi");
+
+// ================================
+// PROGRAM FLOWS: SEQUENTIAL, SELECTION, ITERATION
+// ================================
 
 // Program flows (we have types of processing flows in programming including sequential, selection, and iteration)
 // Sequential Flow: This is the default flow of execution where statements are executed one after the other in the order they appear in the code.
@@ -305,15 +324,15 @@ determineGrade(60); // calling the function with marks 60
 // Note : the else if statements are checked in order, and the first condition that evaluates to true will execute its corresponding code block. If none of the conditions are true, the code block inside the else statement will be executed.
 // Note: The `else if` statements are used to check multiple conditions in sequence. They work well when each condition is different. However, if you are checking one variable against many possible fixed values, a `switch` statement is usually cleaner and easier to read.
 
-// The switch statements
+// ================================
+// THE SWITCH STATEMENT
+// ================================
 
 // Parts of a switch statement :
 // 1.The switch keyword this starts the statement
 // 2.case looks for a possible match for values
 // 3 break stops code from continuing to the next case
 // 4 default runs only when no cases match
-
-
 
 function daysOfWeek(dayNumber){
 
@@ -353,3 +372,157 @@ function daysOfWeek(dayNumber){
 
 daysOfWeek(4);
 
+// ================================
+// Program Flow: LOOPS
+// ================================
+
+// The While Loop
+// - evaluates a condition before each iteration
+// - runs as long as the condition is true
+
+let count = 0;
+while (count < 3) {
+  console.log("While loop count:", count);
+  count++;
+}
+
+// The Do While Loop
+// - executes the loop body at least once, then checks condition
+
+let dcount = 0;
+do {
+  console.log("Do...while loop dcount:", dcount);
+  dcount++;
+} while (dcount < 2);
+
+// The For Loop
+// - traditional counted loop: for(init; condition; increment)
+
+for (let i = 0; i < 3; i++) {
+  console.log("For loop i:", i);
+}
+
+// The For..in Loop
+// - iterates over enumerable property names (keys) of an object
+const sampleObj = { a: 1, b: 2, c: 3 };
+for (let key in sampleObj) {
+  console.log("for..in key:", key, "value:", sampleObj[key]);
+}
+
+// The For..of Loop
+// - iterates over iterable values (arrays, strings, maps, sets)
+const sampleArray = ["apple", "banana", "cherry"];
+for (let fruit of sampleArray) {
+  console.log("for..of fruit:", fruit);
+}
+
+// Break and Continue
+// - break: exit the loop immediately
+// - continue: skip the rest of this iteration and move to next
+
+for (let j = 0; j < 5; j++) {
+  if (j === 3) {
+    console.log("Breaking at", j);
+    break; // exits the loop completely
+  }
+  if (j === 1) {
+    console.log("Skipping", j);
+    continue; // skip to next iteration
+  }
+  console.log("Loop j:", j);
+}
+
+// ================================
+// INTRODUCTION TO ARRAYS
+// ================================
+
+// Arrays: collection of values stored in a single variable
+let arr = ["red", "green", "blue"];
+console.log("Initial array:", arr);
+
+// Adding elements
+// push() adds to the end, unshift() adds to the start
+arr.push("yellow");
+console.log("After push:", arr);
+arr.unshift("purple");
+console.log("After unshift:", arr);
+
+// Removing elements
+// pop() removes from the end, shift() removes from the start
+arr.pop();
+console.log("After pop:", arr);
+arr.shift();
+console.log("After shift:", arr);
+
+// splice() can remove or add at any position
+arr.splice(1, 1); // remove 1 element at index 1
+console.log("After splice remove:", arr);
+arr.splice(1, 0, "black", "white"); // insert at index 1
+console.log("After splice insert:", arr);
+
+// Other helpful array methods examples:
+console.log("Array length:", arr.length);
+console.log("Index of 'black':", arr.indexOf("black"));
+console.log("Join array to string:", arr.join(", "));
+
+// ================================
+// INTRODUCTION TO OBJECTS
+// ================================
+
+// Creating an Object (already shown above but repeated with explanation)
+let person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+  greet: function() { // Method - function defined inside object
+    console.log(`Hello, my name is ${this.firstName} ${this.lastName}`);
+  }
+};
+
+console.log("Person object:", person);
+
+// Properties & Methods
+// - Properties are key-value pairs (firstName, lastName, age)
+// - Methods are functions stored as object properties (greet)
+
+// Accessing Object Properties
+console.log("First name (dot):", person.firstName);
+console.log("Last name (bracket):", person["lastName"]);
+
+// Calling a method
+person.greet();
+
+// Adding and Modifying Object Properties
+person.middleName = "William"; // add
+console.log("After adding middleName:", person);
+person.age = 31; // modify
+console.log("After modifying age:", person);
+
+// Removing Object Properties
+// - use the delete operator to remove a property
+delete person.middleName;
+console.log("After deleting middleName:", person);
+
+// Another example: dynamically add/remove
+person.nickname = "JD";
+console.log("Added nickname:", person.nickname);
+delete person.nickname;
+console.log("Removed nickname, exists?", person.nickname);
+
+// ================================
+// REMOVING OBJECT PROPERTIES (DETAILED)
+// ================================
+// If you need to remove multiple properties safely, you can check first:
+if ("age" in person) {
+  delete person.age;
+  console.log("Deleted age. Current person:", person);
+} else {
+  console.log("Age property not found.");
+}
+
+// ================================
+// END OF CHEAT SHEET
+// ================================
+
+// You kept your original functions, explanations, and comments — I grouped them into sections and added small, clear loop/array/object examples so the "Program Flow: Loops" and "Removing Object Properties" sections are covered thoroughly.
+// If you want this structured as a README next (professional), or exported to a single downloadable file, tell me which format (Markdown README, plain .js file, or both) and I'll produce it.
