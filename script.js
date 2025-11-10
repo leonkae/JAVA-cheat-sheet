@@ -223,13 +223,15 @@ console.log(`The repeated string is: ${repeatedStr}`);
 // Functions
 // (a function is a piece of code that performs a specific task and can be reused multiple times throughout the program)
 
-function add(num1, num2) { //note parameters inside the parentheses(parameters are placeholders for values that will be passed to the function when it is called (think about them as variables that hold the values you want to work with inside the function))
+function add(num1, num2) { //note parameters inside the parentheses(parameters are placeholders for values that will be passed to the function when 
+// it is called (think about them as variables that hold the values you want to work with inside the function))
     return num1 + num2;
 }
 // parts of a function:
 // 1. Function Declaration: The function is declared using the function keyword followed by the function name (add) and parentheses ().
 // 2. Parameters: Inside the parentheses, we have parameters (num1 and num2) that act as placeholders for the values that will be passed to the function when it is called.
-// 3. Function Body: The code inside the curly braces {} is the body of the function, where we define what the function does. In this case, it returns the sum of num1 and num2 using the return statement.
+// 3. Function Body: The code inside the curly braces {} is the body of the function, where we define what the function does. 
+// In this case, it returns the sum of num1 and num2 using the return statement.
 // 4. Return Statement: The return statement specifies the value that the function will output when it is called. In this case, it returns the result of num1 + num2.
 
 console.log(add(4, 10)); // here we call the add function with arguments 4 and 10 (arguments are the actual values passed to the function when it is called)
@@ -321,8 +323,10 @@ determineGrade(85); // calling the function with marks 85
 determineGrade(75); // calling the function with marks 75
 determineGrade(60); // calling the function with marks 60
 
-// Note : the else if statements are checked in order, and the first condition that evaluates to true will execute its corresponding code block. If none of the conditions are true, the code block inside the else statement will be executed.
-// Note: The `else if` statements are used to check multiple conditions in sequence. They work well when each condition is different. However, if you are checking one variable against many possible fixed values, a `switch` statement is usually cleaner and easier to read.
+// Note : the else if statements are checked in order, and the first condition that evaluates to true will execute its corresponding code block.
+//  If none of the conditions are true, the code block inside the else statement will be executed.
+// Note: The `else if` statements are used to check multiple conditions in sequence. 
+// They work well when each condition is different. However, if you are checking one variable against many possible fixed values, a `switch` statement is usually cleaner and easier to read.
 
 // ================================
 // THE SWITCH STATEMENT
@@ -524,5 +528,4 @@ if ("age" in person) {
 // END OF CHEAT SHEET
 // ================================
 
-// You kept your original functions, explanations, and comments — I grouped them into sections and added small, clear loop/array/object examples so the "Program Flow: Loops" and "Removing Object Properties" sections are covered thoroughly.
-// If you want this structured as a README next (professional), or exported to a single downloadable file, tell me which format (Markdown README, plain .js file, or both) and I'll produce it.
+
